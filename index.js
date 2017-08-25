@@ -38,7 +38,7 @@ app.patch('/', (req, res) => {
 // @param: id
 app.delete('/', (req, res) => {
     todos = todos.filter(todo => todo.id !== req.body.id);
-    res.send(todos)
+    res.send(true)
 });
 
 // Clear all completed todos.
