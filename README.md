@@ -10,12 +10,12 @@ node index.js
 
 ### GET
 
-Get all todos
+> Get all todos
 
 `endpoint: /`
 
+> Returns array[objects]
 ```
-returns array<objests>
 [
     {
         "id": "9a1f82ab-7670-449f-b136-1833600bbd5b",
@@ -32,19 +32,25 @@ returns array<objests>
 
 ### Post
 
-Create new todo
+> Create new todo
 
 `endpoint: /`
 
+> Headers
+`Content-type: application/json`
+
+> Body 
 
 ```
-Content-type: application/json
 {
     title: Todo tile,
     done: false
 }
+```
 
-returns objests
+> Returns object
+
+```
     {
         "id": "e120050b-4193-4d98-8a58-2081115f92eb",
         "title": "Buy milk",
@@ -55,18 +61,22 @@ returns objests
 
 ### Patch
 
-Mark todo as done
+> Mark todo as done
 
 `endpoint: /`
 
+> Headers
+`Content-type: application/json`
 
+> Body
 ```
-Content-type: application/json
 {
     id: todo id
 }
+```
 
-returns objests
+> Returns object
+```
     {
         "id": "e120050b-4193-4d98-8a58-2081115f92eb",
         "title": "Buy milk",
@@ -76,30 +86,31 @@ returns objests
     
 ### Delete
 
-Delete todo
+> Delete todo
 `endpoint: /`
 
+> Headers
+`Content-type: application/json`
+
+> Body
 ```
-Content-type: application/json
 {
     id: todo id
 }
 ```
-
-```
-returns boolen true|false
-```
+> Returns boolean
+`true|false`
 
 
 ### GET
 
-Clear completed todos
+> Clear completed todos
 
 `endpoint: /clear`
 
+> Returns array[objects]
 
 ```
-returns array<objests>
 [
     {
         "id": "9a1f82ab-7670-449f-b136-1833600bbd5b",
