@@ -52,11 +52,11 @@ node index.js
 > Returns object
 
 ```
-    {
-        "id": "e120050b-4193-4d98-8a58-2081115f92eb",
-        "title": "Buy milk",
-        "done": false
-    }
+{
+    "id": "e120050b-4193-4d98-8a58-2081115f92eb",
+    "title": "Buy milk",
+    "done": false
+}
 ```
    
 
@@ -79,11 +79,11 @@ node index.js
 
 > Returns object
 ```
-    {
-        "id": "e120050b-4193-4d98-8a58-2081115f92eb",
-        "title": "Buy milk",
-        "done": true
-    }
+{
+    "id": "e120050b-4193-4d98-8a58-2081115f92eb",
+    "title": "Buy milk",
+    "done": true
+}
 ```
     
 ### Delete todo
