@@ -2,11 +2,29 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const uuidv4 = require('uuid/v4');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json());
 
 // Todo DB.
-var todos = [];
+var todos = [
+    {
+        id: uuidv4(),
+        title: 'Buy milk',
+        done: false
+    },
+    {
+        id: uuidv4(),
+        title: 'Record react series',
+        done: false
+    },
+    {
+        id: uuidv4(),
+        title: 'Like SocialNerds on YouTube',
+        done: true
+    },
+];
 
 // Get all todos.
 app.get('/', (req, res) => {
@@ -18,7 +36,7 @@ app.post('/', (req, res) => {
     todo = {
         id: uuidv4(),
         title: req.body.title,
-        done: req.body.done
+        done: false
     };
 
     todos.push(todo);
@@ -27,17 +45,15 @@ app.post('/', (req, res) => {
 });
 
 // Mark todo as done
-// @param: id
-app.patch('/', (req, res) => {
-    let todo = todos.filter(todo => todo.id === req.body.id);
+app.patch('/:id', (req, res) => {
+    let todo = todos.filter(todo => todo.id === req.params.id);
     todo[0].done = !todo[0].done;
     res.send(todo[0]);
 });
 
 // Delete a todo
-// @param: id
-app.delete('/', (req, res) => {
-    todos = todos.filter(todo => todo.id !== req.body.id);
+app.delete('/:id', (req, res) => {
+    todos = todos.filter(todo => todo.id !== req.params.id);
     res.send(true)
 });
 

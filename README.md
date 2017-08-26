@@ -24,7 +24,7 @@ node index.js
     },
     {
         "id": "adec299a-a0a1-4ddc-acf6-b9aa4c4f9f1c",
-        "title": "Buy milk",
+        "title": "Like SocialNerds on YouTube",
         "done": false
     }
 ]
@@ -44,7 +44,7 @@ node index.js
 
 ```
 {
-    title: Todo tile,
+    title: Todo title,
     done: false
 }
 ```
@@ -64,18 +64,11 @@ node index.js
 
 > Method: PATCH
 
-`endpoint: /`
+`endpoint: /:id`
 
 > Headers
 
 `Content-type: application/json`
-
-> Body
-```
-{
-    id: todo id
-}
-```
 
 > Returns object
 ```
@@ -90,19 +83,14 @@ node index.js
 
 > Method: DELETE
 
-`endpoint: /`
+`endpoint: /:id`
 
 > Headers
 
 `Content-type: application/json`
 
-> Body
-```
-{
-    id: todo id
-}
-```
 > Returns boolean
+
 `true|false`
 
 
