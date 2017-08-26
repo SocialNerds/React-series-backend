@@ -8,9 +8,9 @@ npm install
 node index.js
 ```
 
-### GET
+### Get all todos
 
-> Get all todos
+> Method: GET
 
 `endpoint: /`
 
@@ -30,9 +30,9 @@ node index.js
 ]
 ```
 
-### Post
+### Create new todo
 
-> Create new todo
+> Method: POST
 
 `endpoint: /`
 
@@ -60,9 +60,9 @@ node index.js
 ```
    
 
-### Patch
+### Mark todo as done
 
-> Mark todo as done
+> Method: PATCH
 
 `endpoint: /`
 
@@ -86,9 +86,9 @@ node index.js
     }
 ```
     
-### Delete
+### Delete todo
 
-> Delete todo
+> Method: DELETE
 
 `endpoint: /`
 
@@ -106,9 +106,9 @@ node index.js
 `true|false`
 
 
-### GET
+### Clear completed todos
 
-> Clear completed todos
+> Method: GET
 
 `endpoint: /clear`
 
