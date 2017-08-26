@@ -37,6 +37,7 @@ node index.js
 `endpoint: /`
 
 > Headers
+
 `Content-type: application/json`
 
 > Body 
@@ -66,6 +67,7 @@ node index.js
 `endpoint: /`
 
 > Headers
+
 `Content-type: application/json`
 
 > Body
@@ -87,9 +89,11 @@ node index.js
 ### Delete
 
 > Delete todo
+
 `endpoint: /`
 
 > Headers
+
 `Content-type: application/json`
 
 > Body
